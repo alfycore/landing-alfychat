@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0B0B0D;
+    color: #E4E4E7;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .krona-one-regular {
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Krona One', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: rgba(108, 92, 231, 0.35);
+    color: #FAFAFA;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #27272A;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3F3F46;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-[#111113] border border-[#1E1E22] rounded-xl;
+  }
+
+  .card-hover {
+    @apply bg-[#111113] border border-[#1E1E22] rounded-xl transition-all duration-300;
+  }
+
+  .card-hover:hover {
+    border-color: #2A2A30;
+    background-color: #151517;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#C4B5FD] to-[#818CF8];
+  }
+
+  .glow-sm {
+    box-shadow: 0 0 20px rgba(108, 92, 231, 0.08);
+  }
+
+  .glow-md {
+    box-shadow: 0 0 40px rgba(108, 92, 231, 0.12);
+  }
+
+  .divider {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-[#1E1E22] to-transparent;
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "hero": {
+    "status": "Coming Soon",
+    "title": "End-to-end encrypted",
+    "subtitle": "messaging",
+    "badges": {
+      "encryption": "E2E Encryption",
+      "hosted": "Hosted in France",
+      "voice": "Voice Calls",
+      "opensource": "Open Source"
+    },
+    "scroll": "Scroll"
+  },
+  "countdown": {
+    "title": "Launching in",
+    "launched": "It's live!",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Min",
+    "seconds": "Sec"
+  },
+  "features": {
+    "title": "Features",
+    "subtitle": "Everything you need",
+    "list": {
+      "messaging": {
+        "title": "Instant Messaging",
+        "description": "Private messages and groups, delivered instantly via WebSocket"
+      },
+      "encryption": {
+        "title": "3-Level Encryption",
+        "description": "AES-256-GCM with flexible key management based on your needs"
+      },
+      "voice": {
+        "title": "Voice Calls",
+        "description": "End-to-end encrypted P2P calls"
+      },
+      "groups": {
+        "title": "Private Groups",
+        "description": "Group conversations with roles and member management"
+      },
+      "privacy": {
+        "title": "GDPR Compliant",
+        "description": "Your data belongs to you. Export and delete anytime"
+      },
+      "fast": {
+        "title": "Microservices Architecture",
+        "description": "WebSocket gateway + dedicated services for optimal performance"
+      },
+      "customizable": {
+        "title": "Themes",
+        "description": "Customizable interface, native dark mode"
+      },
+      "france": {
+        "title": "Hosted in France",
+        "description": "Servers located in France, GDPR compliant"
+      },
+      "notifications": {
+        "title": "Real-time Notifications",
+        "description": "Online presence, read status, instant notifications"
+      },
+      "opensource": {
+        "title": "Data Export",
+        "description": "Export everything anytime. GDPR Article 20"
+      }
+    }
+  },
+  "messaging": {
+    "title": "Smart Hybrid Storage",
+    "subtitle": "Best of both worlds",
+    "server": {
+      "title": "Last 30 days",
+      "subtitle": "On our servers",
+      "description": "Instant access to your recent messages from any device",
+      "features": {
+        "sync": "Automatic sync",
+        "hosted": "Hosted in France",
+        "fast": "Ultra-fast access"
+      }
+    },
+    "p2p": {
+      "title": "After 30 days",
+      "subtitle": "Encrypted P2P",
+      "description": "Unlimited history stored encrypted on your devices",
+      "features": {
+        "unlimited": "Unlimited storage",
+        "encrypted": "E2E encryption",
+        "private": "100% private"
+      }
+    },
+    "flow": {
+      "title": "How it works",
+      "description": "Enjoy instant access to your recent messages while keeping unlimited history on your devices",
+      "step1": "Server FR",
+      "step2": "Your devices"
+    }
+  },
+  "encryption": {
+    "title": "Security",
+    "subtitle": "3-Level Encryption",
+    "levels": {
+      "standard": {
+        "title": "Level 1 - Standard",
+        "description": "Encryption key on server. Ideal for groups",
+        "features": {
+          "encryption": "AES-256-GCM",
+          "keys": "Server-protected key",
+          "forward": "Recovery possible"
+        }
+      },
+      "enhanced": {
+        "title": "Level 2 - Enhanced",
+        "description": "Key transmitted to user + server backup",
+        "features": {
+          "rotation": "Key delivered to client",
+          "verification": "Secure backup",
+          "expiry": "Enhanced privacy"
+        }
+      },
+      "maximum": {
+        "title": "Level 3 - Maximum",
+        "description": "Key transmitted then deleted from server. Zero trace",
+        "features": {
+          "ephemeral": "Pure E2E",
+          "screenshot": "No server trace",
+          "verification": "Absolute privacy"
+        }
+      }
+    }
+  },
+  "stack": {
+    "title": "Architecture",
+    "subtitle": "Tech Stack",
+    "frontend": {
+      "title": "Frontend"
+    },
+    "gateway": {
+      "title": "Gateway"
+    },
+    "services": {
+      "title": "Services"
+    },
+    "data": {
+      "title": "Data"
+    }
+  },
+  "cta": {
+    "title": "Ready to communicate differently?",
+    "subtitle": "AlfyChat coming soon. Stay informed about the launch"
+  },
+  "footer": {
+    "made": "Made with",
+    "by": "by AlfyCore association",
+    "privacy": "GDPR Compliant",
+    "hosted": "Hosted in France"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "hero": {
+    "status": "Bientôt disponible",
+    "title": "Messagerie chiffrée",
+    "subtitle": "de bout en bout",
+    "badges": {
+      "encryption": "Chiffrement E2E",
+      "hosted": "Hébergé en France",
+      "voice": "Appels vocaux",
+      "opensource": "Open Source"
+    },
+    "scroll": "Défiler"
+  },
+  "countdown": {
+    "title": "Lancement dans",
+    "launched": "C'est lancé !",
+    "days": "Jours",
+    "hours": "Heures",
+    "minutes": "Min",
+    "seconds": "Sec"
+  },
+  "features": {
+    "title": "Fonctionnalités",
+    "subtitle": "Tout ce dont vous avez besoin",
+    "list": {
+      "messaging": {
+        "title": "Messagerie instantanée",
+        "description": "Messages privés et groupes, livrés instantanément via WebSocket"
+      },
+      "encryption": {
+        "title": "Chiffrement 3 niveaux",
+        "description": "AES-256-GCM avec gestion de clés flexible selon vos besoins"
+      },
+      "voice": {
+        "title": "Appels vocaux",
+        "description": "Appels P2P chiffrés de bout en bout"
+      },
+      "groups": {
+        "title": "Groupes privés",
+        "description": "Conversations de groupe avec rôles et gestion des membres"
+      },
+      "privacy": {
+        "title": "Conforme RGPD",
+        "description": "Vos données vous appartiennent. Export et suppression à tout moment"
+      },
+      "fast": {
+        "title": "Architecture microservices",
+        "description": "Gateway WebSocket + services dédiés pour une performance optimale"
+      },
+      "customizable": {
+        "title": "Thèmes",
+        "description": "Interface personnalisable, mode sombre natif"
+      },
+      "france": {
+        "title": "Hébergé en France",
+        "description": "Serveurs situés en France, conformes RGPD"
+      },
+      "notifications": {
+        "title": "Notifications temps réel",
+        "description": "Présence en ligne, statut de lecture, notifications instantanées"
+      },
+      "opensource": {
+        "title": "Export de données",
+        "description": "Exportez tout à tout moment. Article 20 RGPD"
+      }
+    }
+  },
+  "messaging": {
+    "title": "Stockage hybride intelligent",
+    "subtitle": "Le meilleur des deux mondes",
+    "server": {
+      "title": "30 derniers jours",
+      "subtitle": "Sur nos serveurs",
+      "description": "Accès instantané à vos messages récents depuis n'importe quel appareil",
+      "features": {
+        "sync": "Synchronisation automatique",
+        "hosted": "Hébergé en France",
+        "fast": "Accès ultra-rapide"
+      }
+    },
+    "p2p": {
+      "title": "Après 30 jours",
+      "subtitle": "P2P chiffré",
+      "description": "Historique illimité stocké de façon chiffrée sur vos appareils",
+      "features": {
+        "unlimited": "Stockage illimité",
+        "encrypted": "Chiffrement E2E",
+        "private": "100% privé"
+      }
+    },
+    "flow": {
+      "title": "Comment ça marche",
+      "description": "Profitez d'un accès instantané à vos messages récents tout en conservant un historique illimité sur vos appareils",
+      "step1": "Serveur FR",
+      "step2": "Vos appareils"
+    }
+  },
+  "encryption": {
+    "title": "Sécurité",
+    "subtitle": "Chiffrement 3 niveaux",
+    "levels": {
+      "standard": {
+        "title": "Niveau 1 - Standard",
+        "description": "Clé de chiffrement sur le serveur. Idéal pour les groupes",
+        "features": {
+          "encryption": "AES-256-GCM",
+          "keys": "Clé protégée serveur",
+          "forward": "Récupération possible"
+        }
+      },
+      "enhanced": {
+        "title": "Niveau 2 - Renforcé",
+        "description": "Clé transmise à l'utilisateur + backup serveur",
+        "features": {
+          "rotation": "Clé livrée au client",
+          "verification": "Backup sécurisé",
+          "expiry": "Confidentialité accrue"
+        }
+      },
+      "maximum": {
+        "title": "Niveau 3 - Maximum",
+        "description": "Clé transmise puis supprimée du serveur. Zéro trace",
+        "features": {
+          "ephemeral": "E2E pur",
+          "screenshot": "Aucune trace serveur",
+          "verification": "Confidentialité absolue"
+        }
+      }
+    }
+  },
+  "stack": {
+    "title": "Architecture",
+    "subtitle": "Stack technique",
+    "frontend": {
+      "title": "Frontend"
+    },
+    "gateway": {
+      "title": "Gateway"
+    },
+    "services": {
+      "title": "Services"
+    },
+    "data": {
+      "title": "Data"
+    }
+  },
+  "cta": {
+    "title": "Prêt à communiquer autrement ?",
+    "subtitle": "AlfyChat arrive bientôt. Restez informé du lancement"
+  },
+  "footer": {
+    "made": "Fait avec",
+    "by": "par l'association AlfyCore",
+    "privacy": "Conforme RGPD",
+    "hosted": "Hébergé en France"
+  }
+}
