@@ -7,10 +7,10 @@ export default function LanguageSwitch() {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <div className="fixed top-6 right-6 z-50 flex gap-2 card p-1">
+    <div className="fixed top-6 right-6 z-50 flex gap-1 glass rounded-xl p-1">
       <button
         onClick={() => setLanguage('fr')}
-        className={`relative px-3 py-1.5 text-sm font-medium transition-colors rounded-md ${
+        className={`relative px-3 py-1.5 text-sm font-medium transition-colors rounded-lg ${
           language === 'fr'
             ? 'text-text-primary'
             : 'text-text-muted hover:text-text-secondary'
@@ -19,8 +19,8 @@ export default function LanguageSwitch() {
         {language === 'fr' && (
           <motion.div
             layoutId="language-indicator"
-            className="absolute inset-0 bg-surface-2"
-            style={{ borderRadius: '6px' }}
+            className="absolute inset-0 bg-brand/15 border border-brand/20"
+            style={{ borderRadius: '8px' }}
             transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
           />
         )}
@@ -28,7 +28,7 @@ export default function LanguageSwitch() {
       </button>
       <button
         onClick={() => setLanguage('en')}
-        className={`relative px-3 py-1.5 text-sm font-medium transition-colors rounded-md ${
+        className={`relative px-3 py-1.5 text-sm font-medium transition-colors rounded-lg ${
           language === 'en'
             ? 'text-text-primary'
             : 'text-text-muted hover:text-text-secondary'
@@ -37,8 +37,8 @@ export default function LanguageSwitch() {
         {language === 'en' && (
           <motion.div
             layoutId="language-indicator"
-            className="absolute inset-0 bg-surface-2"
-            style={{ borderRadius: '6px' }}
+            className="absolute inset-0 bg-brand/15 border border-brand/20"
+            style={{ borderRadius: '8px' }}
             transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
           />
         )}

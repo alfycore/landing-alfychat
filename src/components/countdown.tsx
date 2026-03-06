@@ -43,21 +43,21 @@ function Digit({ value }: { value: string }) {
     <div className="relative" style={{ perspective: '600px' }}>
       <div className="relative w-[32px] h-[48px] sm:w-[40px] sm:h-[60px] md:w-[48px] md:h-[72px]">
         {/* Background */}
-        <div className="absolute inset-0 bg-black rounded-md border border-[#1a1a1a]" />
+        <div className="absolute inset-0 bg-surface rounded-lg border border-border/60" />
 
-        {/* Top half - Static (always visible) */}
-        <div className="absolute inset-x-0 top-0 h-1/2 bg-black overflow-hidden rounded-t-md z-10">
+        {/* Top half - Static */}
+        <div className="absolute inset-x-0 top-0 h-1/2 bg-surface overflow-hidden rounded-t-lg z-10">
           <div className="absolute inset-x-0 top-0 h-[48px] sm:h-[60px] md:h-[72px] flex items-center justify-center">
-            <span className="font-mono text-xl sm:text-2xl md:text-3xl font-bold text-white tabular-nums leading-none">
+            <span className="font-mono text-xl sm:text-2xl md:text-3xl font-bold text-text-primary tabular-nums leading-none">
               {value}
             </span>
           </div>
         </div>
 
-        {/* Bottom half - Static (always visible) */}
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-black overflow-hidden rounded-b-md z-10">
+        {/* Bottom half - Static */}
+        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-surface-2 overflow-hidden rounded-b-lg z-10">
           <div className="absolute inset-x-0 bottom-0 h-[48px] sm:h-[60px] md:h-[72px] flex items-center justify-center">
-            <span className="font-mono text-xl sm:text-2xl md:text-3xl font-bold text-white tabular-nums leading-none">
+            <span className="font-mono text-xl sm:text-2xl md:text-3xl font-bold text-text-primary tabular-nums leading-none">
               {value}
             </span>
           </div>
@@ -65,10 +65,10 @@ function Digit({ value }: { value: string }) {
 
         {isFlipping && (
           <>
-            {/* Top half - Flipping (previous) */}
+            {/* Top half - Flipping */}
             <motion.div
               key={value + '-top'}
-              className="absolute inset-x-0 top-0 h-1/2 bg-black overflow-hidden rounded-t-md z-20"
+              className="absolute inset-x-0 top-0 h-1/2 bg-surface overflow-hidden rounded-t-lg z-20"
               style={{
                 transformOrigin: 'bottom',
                 backfaceVisibility: 'hidden',
@@ -78,16 +78,16 @@ function Digit({ value }: { value: string }) {
               transition={{ duration: 0.4, ease: 'easeInOut' }}
             >
               <div className="absolute inset-x-0 top-0 h-[48px] sm:h-[60px] md:h-[72px] flex items-center justify-center">
-                <span className="font-mono text-xl sm:text-2xl md:text-3xl font-bold text-white tabular-nums leading-none">
+                <span className="font-mono text-xl sm:text-2xl md:text-3xl font-bold text-text-primary tabular-nums leading-none">
                   {prev}
                 </span>
               </div>
             </motion.div>
 
-            {/* Bottom half - Flipping (current) */}
+            {/* Bottom half - Flipping */}
             <motion.div
               key={value + '-bottom'}
-              className="absolute inset-x-0 bottom-0 h-1/2 bg-black overflow-hidden rounded-b-md z-20"
+              className="absolute inset-x-0 bottom-0 h-1/2 bg-surface-2 overflow-hidden rounded-b-lg z-20"
               style={{
                 transformOrigin: 'top',
                 backfaceVisibility: 'hidden',
@@ -97,7 +97,7 @@ function Digit({ value }: { value: string }) {
               transition={{ duration: 0.4, ease: 'easeInOut' }}
             >
               <div className="absolute inset-x-0 bottom-0 h-[48px] sm:h-[60px] md:h-[72px] flex items-center justify-center">
-                <span className="font-mono text-xl sm:text-2xl md:text-3xl font-bold text-white tabular-nums leading-none">
+                <span className="font-mono text-xl sm:text-2xl md:text-3xl font-bold text-text-primary tabular-nums leading-none">
                   {value}
                 </span>
               </div>
@@ -106,7 +106,7 @@ function Digit({ value }: { value: string }) {
         )}
 
         {/* Center split line */}
-        <div className="absolute inset-x-0 top-1/2 h-[1px] bg-black z-30 shadow-lg" />
+        <div className="absolute inset-x-0 top-1/2 h-[1px] bg-border/40 z-30" />
       </div>
     </div>
   );

@@ -12,7 +12,6 @@ import {
   Palette,
   FileText,
   Bell,
-  ArrowRight,
 } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 
@@ -20,63 +19,23 @@ export default function Features() {
   const { t } = useLanguage();
 
   const features = [
-    {
-      icon: MessageCircle,
-      title: t.features.list.messaging.title,
-      desc: t.features.list.messaging.description,
-    },
-    {
-      icon: Lock,
-      title: t.features.list.encryption.title,
-      desc: t.features.list.encryption.description,
-    },
-    {
-      icon: Phone,
-      title: t.features.list.voice.title,
-      desc: t.features.list.voice.description,
-    },
-    {
-      icon: Users,
-      title: t.features.list.groups.title,
-      desc: t.features.list.groups.description,
-    },
-    {
-      icon: Shield,
-      title: t.features.list.privacy.title,
-      desc: t.features.list.privacy.description,
-    },
-    {
-      icon: Zap,
-      title: t.features.list.fast.title,
-      desc: t.features.list.fast.description,
-    },
-    {
-      icon: Palette,
-      title: t.features.list.customizable.title,
-      desc: t.features.list.customizable.description,
-    },
-    {
-      icon: Globe,
-      title: t.features.list.france.title,
-      desc: t.features.list.france.description,
-    },
-    {
-      icon: Bell,
-      title: t.features.list.notifications.title,
-      desc: t.features.list.notifications.description,
-    },
-    {
-      icon: FileText,
-      title: t.features.list.opensource.title,
-      desc: t.features.list.opensource.description,
-    },
+    { icon: MessageCircle, title: t.features.list.messaging.title, desc: t.features.list.messaging.description, color: '#6C5CE7' },
+    { icon: Lock, title: t.features.list.encryption.title, desc: t.features.list.encryption.description, color: '#818CF8' },
+    { icon: Phone, title: t.features.list.voice.title, desc: t.features.list.voice.description, color: '#FBBF24' },
+    { icon: Users, title: t.features.list.groups.title, desc: t.features.list.groups.description, color: '#6C5CE7' },
+    { icon: Shield, title: t.features.list.privacy.title, desc: t.features.list.privacy.description, color: '#34D399' },
+    { icon: Zap, title: t.features.list.fast.title, desc: t.features.list.fast.description, color: '#FBBF24' },
+    { icon: Palette, title: t.features.list.customizable.title, desc: t.features.list.customizable.description, color: '#818CF8' },
+    { icon: Globe, title: t.features.list.france.title, desc: t.features.list.france.description, color: '#34D399' },
+    { icon: Bell, title: t.features.list.notifications.title, desc: t.features.list.notifications.description, color: '#FBBF24' },
+    { icon: FileText, title: t.features.list.opensource.title, desc: t.features.list.opensource.description, color: '#34D399' },
   ];
 
   return (
-    <section className="py-24 sm:py-32 px-4">
-      <div className="max-w-5xl mx-auto">
-        <Reveal className="mb-16 sm:mb-20">
-          <span className="text-[10px] uppercase tracking-[0.25em] text-brand-light font-medium">
+    <section className="py-24 sm:py-32 px-4 relative">
+      <div className="max-w-6xl mx-auto relative z-10">
+        <Reveal className="mb-16 sm:mb-20 text-center">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[11px] uppercase tracking-[0.2em] text-brand-light font-medium border border-brand/20 bg-brand/[0.06] mb-6">
             {t.features.title}
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl mt-3 mb-4">
@@ -84,19 +43,27 @@ export default function Features() {
           </h2>
         </Reveal>
 
-        <RevealGroup className="grid grid-cols-1 sm:grid-cols-2 gap-3" stagger={0.04}>
+        <RevealGroup className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" stagger={0.05}>
           {features.map((f) => (
             <RevealItem key={f.title}>
-              <div className="card-hover group flex items-start gap-4 p-5 sm:p-6">
-                <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-surface-3 border border-border flex items-center justify-center group-hover:border-brand/30 transition-colors">
-                  <f.icon className="w-4 h-4 text-text-muted group-hover:text-brand-light transition-colors" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
-                    <h3 className="text-sm font-semibold text-text-primary">{f.title}</h3>
-                    <ArrowRight className="w-3 h-3 text-text-muted opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+              <div className="group relative h-full rounded-2xl border border-border/60 bg-surface p-6 transition-all duration-300 hover:border-brand/30 overflow-hidden">
+                <div>
+                  {/* Icon */}
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 border transition-colors duration-300"
+                    style={{
+                      background: f.color + '12',
+                      borderColor: f.color + '25',
+                    }}
+                  >
+                    <f.icon className="w-5 h-5" style={{ color: f.color }} />
                   </div>
-                  <p className="text-xs sm:text-sm text-text-muted leading-relaxed">{f.desc}</p>
+
+                  {/* Title */}
+                  <h3 className="text-[15px] font-semibold text-text-primary mb-2">{f.title}</h3>
+
+                  {/* Description */}
+                  <p className="text-sm text-text-muted leading-relaxed">{f.desc}</p>
                 </div>
               </div>
             </RevealItem>

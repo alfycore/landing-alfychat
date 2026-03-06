@@ -18,8 +18,9 @@ export default function Encryption() {
         t.encryption.levels.standard.features.keys,
         t.encryption.levels.standard.features.forward,
       ],
-      accent: 'text-brand-light border-brand/20 bg-brand/10',
+      accent: 'text-brand-light border-brand/25 bg-brand/10',
       check: 'text-brand-light',
+      glow: '',
     },
     {
       level: 2,
@@ -31,8 +32,9 @@ export default function Encryption() {
         t.encryption.levels.enhanced.features.verification,
         t.encryption.levels.enhanced.features.expiry,
       ],
-      accent: 'text-warning border-warning/20 bg-warning/10',
+      accent: 'text-warning border-warning/25 bg-warning/10',
       check: 'text-warning',
+      glow: '',
     },
     {
       level: 3,
@@ -44,15 +46,16 @@ export default function Encryption() {
         t.encryption.levels.maximum.features.screenshot,
         t.encryption.levels.maximum.features.verification,
       ],
-      accent: 'text-danger border-danger/20 bg-danger/10',
+      accent: 'text-danger border-danger/25 bg-danger/10',
       check: 'text-danger',
+      glow: '',
     },
   ];
 
   return (
-    <section className="py-24 sm:py-32 px-4">
-      <div className="max-w-4xl mx-auto">
-        <Reveal className="mb-14 sm:mb-18">
+    <section className="py-24 sm:py-32 px-4 relative">
+      <div className="max-w-4xl mx-auto relative z-10">
+        <Reveal className="mb-14 sm:mb-18 text-center">
           <span className="text-[10px] uppercase tracking-[0.25em] text-brand-light font-medium">
             {t.encryption.title}
           </span>
@@ -61,15 +64,15 @@ export default function Encryption() {
           </h2>
         </Reveal>
 
-        <RevealGroup className="grid grid-cols-1 md:grid-cols-3 gap-3" stagger={0.08}>
+        <RevealGroup className="grid grid-cols-1 md:grid-cols-3 gap-4" stagger={0.08}>
           {levels.map((l) => (
             <RevealItem key={l.level}>
-              <div className="card p-6 h-full flex flex-col">
+              <div className={`card p-6 h-full flex flex-col transition-all duration-300 ${l.glow}`}>
                 <div className="flex items-center justify-between mb-5">
-                  <div className={`w-9 h-9 rounded-lg border flex items-center justify-center ${l.accent}`}>
-                    <l.icon className="w-4 h-4" />
+                  <div className={`w-10 h-10 rounded-xl border flex items-center justify-center ${l.accent}`}>
+                    <l.icon className="w-4.5 h-4.5" />
                   </div>
-                  <span className="font-mono text-[10px] text-text-muted">
+                  <span className="font-mono text-[10px] text-text-muted px-2 py-0.5 rounded-md bg-surface-2/60 border border-border/40">
                     LVL {l.level}
                   </span>
                 </div>
@@ -79,8 +82,10 @@ export default function Encryption() {
 
                 <ul className="space-y-2.5 mt-auto">
                   {l.items.map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-xs text-text-secondary">
-                      <Check className={`w-3.5 h-3.5 flex-shrink-0 ${l.check}`} />
+                    <li key={item} className="flex items-center gap-2.5 text-xs text-text-secondary">
+                      <div className={`w-4 h-4 rounded-full flex items-center justify-center ${l.accent.split(' ')[2]}`}>
+                        <Check className={`w-3 h-3 flex-shrink-0 ${l.check}`} />
+                      </div>
                       {item}
                     </li>
                   ))}
